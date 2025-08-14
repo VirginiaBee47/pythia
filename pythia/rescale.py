@@ -37,8 +37,8 @@ def get_vector_resolution(file_path):
             for i in range(len(points) - 1):
                 x1, y1 = points[i]
                 x2, y2 = points[i + 1]
-                x_diff = abs(x2 - x1)
-                y_diff = abs(y2 - y1)
+                x_diff = abs(x2 - x1)  # Can we add a round() here and...
+                y_diff = abs(y2 - y1)  # here?
                 if x_diff > 0:
                     if min_x_dist is None or x_diff < min_x_dist:
                         min_x_dist = x_diff
